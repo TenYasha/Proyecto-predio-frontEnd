@@ -1,0 +1,19 @@
+.separador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separador div {
+    margin: 0.4rem;
+}
+
+.btn-registrar{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 0.5rem;
+}
+.btn-registrar button{
+    padding: 0.8rem 1.5rem;
+}
