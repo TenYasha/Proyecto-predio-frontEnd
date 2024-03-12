@@ -1,0 +1,40 @@
+.contenedor {
+
+    padding: 0;
+  
+  }
+  #content{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #content main{
+    justify-content: center;
+    align-items: center;
+    width: 200%;
+    
+  
+  }
+  .nom-com{
+    display: flex;
+    justify-content:space-between  ;
+  }
+  .nom-com div{
+    width: 48%;
+  }
+  
+  .btn-regis{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btn-regis button{
+    width: 48%;
+    font-size: 1.2rem;  
+  }
+  
+  .select-rol{
+    margin: 1rem 0;
+    height: 6rem;
+  }

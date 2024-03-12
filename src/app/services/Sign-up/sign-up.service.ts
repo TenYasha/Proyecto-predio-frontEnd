@@ -6,21 +6,16 @@ import { Observable, catchError } from 'rxjs';
 import { Rol } from 'src/app/models/rol/rol';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SignUpService {
-
-  private urlextrac = "http://10.4.7.20:8080/usuario/lista-rol"
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   obtenerCargos(): Observable<Rol[]> {
-    return this.http.get<Rol[]>(this.urlextrac);
+    return this.http.get<Rol[]>(`${baseUrl}/usuario/lista-rol`);
   }
 
-
-   addUser(usuario: any): Observable<any> {
+  addUser(usuario: any): Observable<any> {
     return this.http.post(`${baseUrl}/usuario/registrar`, usuario);
   }
-  
 }

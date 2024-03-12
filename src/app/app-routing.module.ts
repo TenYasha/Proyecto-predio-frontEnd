@@ -16,16 +16,16 @@ import { UsuarioEditComponent } from './dashboard/usuario-crud/usuario-edit/usua
 const routes: Routes = [
 
   {
-    path: 'dashboard', component: MainPageComponent, canActivate: [IsLoggedGuard],
+    path: 'dashboard', component: MainPageComponent, canActivate: [],
     children: [
       { path: '', component: PageMainAdminComponent },
       { path: 'empleado', component: EmpleadoCrudComponent, canActivate: [RoleAdminGuard] },
-      { path: 'usuario', component: UsuarioCrudComponent, canActivate: [RoleAdminGuard] },
+      { path: 'usuario', component: UsuarioCrudComponent, canActivate: [] },
 
       { path: 'producto-list', component: ProductoCrudComponent, canActivate: [RoleAdminGuard] },
       { path: 'producto-add', component: ProductoAddComponent, canActivate: [RoleAdminGuard] },
 
-      { path: 'registro', component: RegisterUserComponent, canActivate: [RoleAdminGuard] },
+      { path: 'registro', component: RegisterUserComponent, canActivate: [] },
 
       { path: 'producto-update/:idProd', component: ProductoUpdateComponent, canActivate: [RoleAdminGuard] },
 

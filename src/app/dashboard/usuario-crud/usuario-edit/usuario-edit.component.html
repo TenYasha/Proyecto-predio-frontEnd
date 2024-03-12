@@ -12,65 +12,65 @@
           >
             <div class="d-flex justify-content-center mb-3 pb-1">
               <h1 class="fw-bolder" style="color: rgb(103, 100, 100)">
-                Registrar Usuario
+                Editar Usuario
               </h1>
             </div>
             <form [formGroup]="formUser" (submit)="updateUsuario()">
-              <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  formControlName="nombre"
-                  [(ngModel)]="usuario.nombre"
-                  class="form-control"
-                  id="floatingInput"
-                  placeholder=""
-                />
-                <label for="floatingInput">Nombre</label>
-                
-                <div
-                  class="mt-1"
-                  style="color: rgb(192, 52, 52)"
-                  [hidden]="
-                    formUser.get('nombre')?.valid ||
-                    formUser.get('nombre')?.pristine
-                  "
-                >
-                  <p *ngIf="formUser.get('nombre')?.hasError('required')">
-                    Nombre requerido.
-                  </p>
-                  <p *ngIf="formUser.get('nombre')?.hasError('pattern')">
-                    El Nombre min:5 mx:30 caracteres
-                  </p>
+              <div class="nom-com">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    formControlName="nombre"
+                    [(ngModel)]="usuario.nombre"
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder=""
+                  />
+                  <label for="floatingInput">Nombre</label>
+
+                  <div
+                    class="mt-1"
+                    style="color: rgb(192, 52, 52)"
+                    [hidden]="
+                      formUser.get('nombre')?.valid ||
+                      formUser.get('nombre')?.pristine
+                    "
+                  >
+                    <p *ngIf="formUser.get('nombre')?.hasError('required')">
+                      Nombre requerido.
+                    </p>
+                    <p *ngIf="formUser.get('nombre')?.hasError('pattern')">
+                      El Nombre min:5 mx:30 caracteres
+                    </p>
+                  </div>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    formControlName="apellido"
+                    [(ngModel)]="usuario.apellido"
+                    class="form-control"
+                    id="floatingPassword"
+                    placeholder=""
+                  />
+                  <label for="floatingPassword">Apellido</label>
+                  <div
+                    class="mt-1"
+                    style="color: rgb(192, 52, 52)"
+                    [hidden]="
+                      formUser.get('apellido')?.valid ||
+                      formUser.get('apellido')?.pristine
+                    "
+                  >
+                    <p *ngIf="formUser.get('apellido')?.hasError('required')">
+                      Apellido requerido.
+                    </p>
+                    <p *ngIf="formUser.get('apellido')?.hasError('pattern')">
+                      El Apellido min:5 mx:30 caracteres
+                    </p>
+                  </div>
                 </div>
               </div>
-
-              <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  formControlName="apellido"
-                  [(ngModel)]="usuario.apellido"
-                  class="form-control"
-                  id="floatingPassword"
-                  placeholder=""
-                />
-                <label for="floatingPassword">Apellido</label>
-                <div
-                  class="mt-1"
-                  style="color: rgb(192, 52, 52)"
-                  [hidden]="
-                    formUser.get('apellido')?.valid ||
-                    formUser.get('apellido')?.pristine
-                  "
-                >
-                  <p *ngIf="formUser.get('apellido')?.hasError('required')">
-                    Apellido requerido.
-                  </p>
-                  <p *ngIf="formUser.get('apellido')?.hasError('pattern')">
-                    El Apellido min:5 mx:30 caracteres
-                  </p>
-                </div>
-              </div>
-
               <div class="form-floating mb-3">
                 <input
                   type="text"
@@ -132,14 +132,17 @@
                 </div>
               </div>
               <div class="form-floating">
-                <select formControlName="roles" id="roles" name="roles" multiple>
-                  <option *ngFor="let rol of roles" 
-                  [value]="rol">
+                <select
+                  class="form-select select-rol"
+                  formControlName="roles"
+                  id="roles"
+                  name="roles"
+                  multiple
+                >
+                  <option *ngFor="let rol of roles" [value]="rol">
                     {{ rol.nombre }}
                   </option>
                 </select>
-
-
               </div>
 
               <div class="d-grid gap-2 mt-4">
