@@ -1,6 +1,6 @@
 <div class="row">
-  <div class="card mb-4">
-    <div class="card-header" style="background: #1c5088">
+  <div class="card mb-4 cuerpoLista">
+    <div class="card-header" style="background: #24bb98">
       <h4 class="text-white fw-bolder">
         <i class="fas fa-table me-1"></i>Lista Usuarios
       </h4>
@@ -42,9 +42,40 @@
                   }"
                 ></i>
               </th>
-              <th>Apellido</th>
-              <th>Username</th>
-              <th>Roles</th>
+              <th (click)="onSort('apellido')">
+                Apellido
+                <i
+                  *ngIf="sortColumn === 'apellido'"
+                  class="fas"
+                  [ngClass]="{
+                    'fa-sort-up': sortDirection === 'asc',
+                    'fa-sort-down': sortDirection === 'desc'
+                  }"
+                ></i>
+              </th>
+              <th (click)="onSort('username')">
+                Username
+                <i
+                  *ngIf="sortColumn === 'username'"
+                  class="fas"
+                  [ngClass]="{
+                    'fa-sort-up': sortDirection === 'asc',
+                    'fa-sort-down': sortDirection === 'desc'
+                  }"
+                >
+                </i>
+              </th>
+              <th (click)="onSort('roles')">
+                Roles
+                <i
+                  *ngIf="sortColumn === 'roles'"
+                  class="fas"
+                  [ngClass]="{
+                    'fa-sort-up': sortDirection === 'asc',
+                    'fa-sort-down': sortDirection === 'desc'
+                  }"
+                ></i>
+              </th>
               <th class="separador">Estado cuenta</th>
               <th>opciones</th>
             </tr>

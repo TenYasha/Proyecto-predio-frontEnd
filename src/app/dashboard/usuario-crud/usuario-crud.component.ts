@@ -53,18 +53,28 @@ export class UsuarioCrudComponent implements OnInit {
   }
   applySorting() {
     if (this.sortColumn) {
-      this.listUsuario.sort((a, b) => {
-        const aValue = a[this.sortColumn];
-        const bValue = b[this.sortColumn];
-
-        if (typeof aValue === 'string' && typeof bValue === 'string') {
-          return this.sortDirection === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
-        } else {
-          return this.sortDirection === 'asc' ? aValue - bValue : bValue - aValue;
-        }
-      });
+      if (this.sortColumn === 'roles') {
+        this.listUsuario.sort((a, b) => {
+          const rolesA = a.roles ? a.roles.map(role => role.nombre ?.toLowerCase()).join('') : '';
+          const rolesB = b.roles ? b.roles.map(role => role.nombre ?.toLowerCase()).join('') : '';
+          return this.sortDirection === 'asc' ? rolesA.localeCompare(rolesB) : rolesB.localeCompare(rolesA);
+        });
+      } else {
+        this.listUsuario.sort((a, b) => {
+          const aValue = a[this.sortColumn];
+          const bValue = b[this.sortColumn];
+  
+          if (typeof aValue === 'string' && typeof bValue === 'string') {
+            return this.sortDirection === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
+          } else {
+            return this.sortDirection === 'asc' ? aValue - bValue : bValue - aValue;
+          }
+        });
+      }
     }
   }
+  
+  
 
   onSort(column: string) {
     if (this.sortColumn === column) {

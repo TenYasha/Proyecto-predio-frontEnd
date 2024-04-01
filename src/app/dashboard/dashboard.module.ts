@@ -15,6 +15,7 @@ import { ProductoAddComponent } from './producto-crud/producto-add/producto-add.
 import { ProductoUpdateComponent } from './producto-crud/producto-update/producto-update.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuarioEditComponent } from './usuario-crud/usuario-edit/usuario-edit.component';
+import { ContribuyenteComponent } from './contribuyente/contribuyente.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { UsuarioEditComponent } from './usuario-crud/usuario-edit/usuario-edit.c
     ProductoAddComponent,
     ProductoUpdateComponent,
     ProfileComponent,
-    UsuarioEditComponent
+    UsuarioEditComponent,
+    ContribuyenteComponent
 
   ],
   imports: [

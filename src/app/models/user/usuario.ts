@@ -9,7 +9,7 @@ export class Usuario {
     username?: string;
     password?: string;
     enabled?: boolean;
-    roles?: Rol[];
+    roles?: Rol[] ;
     authorities?: Authority[];
     accountNonExpired?: boolean;
     credentialsNonExpired?: boolean;

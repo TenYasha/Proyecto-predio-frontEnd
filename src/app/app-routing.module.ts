@@ -12,15 +12,15 @@ import { ProductoCrudComponent } from './dashboard/producto-crud/producto-crud.c
 import { ProductoAddComponent } from './dashboard/producto-crud/producto-add/producto-add.component';
 import { ProductoUpdateComponent } from './dashboard/producto-crud/producto-update/producto-update.component';
 import { UsuarioEditComponent } from './dashboard/usuario-crud/usuario-edit/usuario-edit.component';
-
+import { ContribuyenteComponent } from './dashboard/contribuyente/contribuyente.component';
 const routes: Routes = [
 
   {
-    path: 'dashboard', component: MainPageComponent, canActivate: [],
+    path: 'dashboard', component: MainPageComponent, canActivate: [IsLoggedGuard],
     children: [
       { path: '', component: PageMainAdminComponent },
-      { path: 'empleado', component: EmpleadoCrudComponent, canActivate: [RoleAdminGuard] },
-      { path: 'usuario', component: UsuarioCrudComponent, canActivate: [] },
+      { path: 'contribuyente', component: ContribuyenteComponent, canActivate: [RoleAdminGuard] },
+      { path: 'usuario', component: UsuarioCrudComponent, canActivate: [RoleAdminGuard] },
 
       { path: 'producto-list', component: ProductoCrudComponent, canActivate: [RoleAdminGuard] },
       { path: 'producto-add', component: ProductoAddComponent, canActivate: [RoleAdminGuard] },
