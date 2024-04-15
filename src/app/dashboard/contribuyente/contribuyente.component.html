@@ -1,5 +1,5 @@
-<div class="row" style="margin-top: 1rem;">
-  <div class="card mb-4 cuerpoLista" >
+<div class="row" style="margin-top: 1rem">
+  <div class="card mb-4 cuerpoLista">
     <div class="card-header" style="background: #4ccad6">
       <h4 class="text-white fw-bolder">
         <i class="fas fa-table me-1"></i>Lista de Contribuyentes
@@ -13,7 +13,7 @@
           type="button"
           class="btn btn-primary btn-registrar"
           data-bs-target="#modalcrud"
-          routerLink="../registro"
+      
         >
           Registrar
         </button>
@@ -50,7 +50,7 @@
               <td>{{ a.nom_contribuyente }}</td>
               <td>{{ a.ape_contribuyente }}</td>
               <td>{{ a.dni }}</td>
-              <td>{{ a.id_tipo_contribuyente }}</td>
+              <td>{{ a.tipo_contribuyente?.nom_tipo }}</td>
 
               <td>
                 <div class="separador">
@@ -61,9 +61,18 @@
                     </button>
                   </div>
                   <div>
-                    <button class="btn btn-danger">
+                    <button class="btn">
                       <!-- Button poner evento click-->
-                      borrar
+                      form-1
+                    </button>
+
+                    <button class="btn">
+                      <!-- Button poner evento click-->
+                      form-2
+                    </button>
+                    <button class="btn">
+                      <!-- Button poner evento click-->
+                      form-3
                     </button>
                   </div>
                 </div>

@@ -16,6 +16,7 @@ import { ProductoUpdateComponent } from './producto-crud/producto-update/product
 import { ProfileComponent } from './profile/profile.component';
 import { UsuarioEditComponent } from './usuario-crud/usuario-edit/usuario-edit.component';
 import { ContribuyenteComponent } from './contribuyente/contribuyente.component';
+import { FichaCatastralIndividualComponent } from './ficha-catastral-individual/ficha-catastral-individual.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ContribuyenteComponent } from './contribuyente/contribuyente.component'
     ProductoUpdateComponent,
     ProfileComponent,
     UsuarioEditComponent,
-    ContribuyenteComponent
+    ContribuyenteComponent,
+    FichaCatastralIndividualComponent
 
   ],
   imports: [

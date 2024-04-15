@@ -34,8 +34,4 @@ export class ProductoService {
   return this.http.delete<any>(`${baseUrl}/api/productos/${idProd}`);
    }
 
-
-
-
-
 }

@@ -25,19 +25,19 @@ export class ContribuyenteComponent implements OnInit {
     private router: Router
   ) {}
 
-
   //funciones de listado
-  getListContribuyente(){
+  getListContribuyente() {
     this.serContribuyente.listContribuyente().subscribe({
-      next: (data) =>{
+      next: (data) => {
         this.listContribuyente = data;
         this.filter = data;
 
         this.applySorting();
-      }, error(error){
+      },
+      error(error) {
         console.log(error);
-      }
-    })
+      },
+    });
   }
 
   //metodo que se ejecutaran al inicio
@@ -50,15 +50,20 @@ export class ContribuyenteComponent implements OnInit {
   searchList() {
     this.filter = this.listContribuyente.filter(
       (a) =>
-          a.nom_contribuyente?.toLowerCase().includes(this.search.toLowerCase()) ||
-          a.ape_contribuyente?.toLowerCase().includes(this.search.toLowerCase()) ||
-          (typeof a.dni === 'number' && a.dni.toString().includes(this.search))
-
-  
-          );
-  this.applySorting();
-  //ordenamiento de la tabla
-}
+        a.nom_contribuyente
+          ?.toLowerCase()
+          .includes(this.search.toLowerCase()) ||
+        a.ape_contribuyente
+          ?.toLowerCase()
+          .includes(this.search.toLowerCase()) ||
+        (typeof a.dni === 'number' && a.dni.toString().includes(this.search)) ||
+        a.tipo_contribuyente?.nom_tipo
+          ?.toLowerCase()
+          .includes(this.search.toLowerCase())
+    );
+    this.applySorting();
+    //ordenamiento de la tabla
+  }
 
   applySorting() {
     if (this.sortColumn) {
@@ -78,6 +83,4 @@ export class ContribuyenteComponent implements OnInit {
       });
     }
   }
-
-
 }
