@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: MainPageComponent,
-    canActivate: [IsLoggedGuard],
+    canActivate: [],
     children: [
       { path: '', component: PageMainAdminComponent },
       {

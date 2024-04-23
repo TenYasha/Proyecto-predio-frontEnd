@@ -59,12 +59,15 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
               "browserTarget": "angular-training:build:production"
             },
             "development": {
+              "allowedHosts": ["miweb.munihuachipa.gob.pe"],
+              
               "browserTarget": "angular-training:build:development"
             }
           },
