@@ -29,7 +29,7 @@ const routes: Routes = [
       {
         path: 'usuario',
         component: UsuarioCrudComponent,
-        canActivate: [RoleAdminGuard],
+        canActivate: [],
       },
 
       {

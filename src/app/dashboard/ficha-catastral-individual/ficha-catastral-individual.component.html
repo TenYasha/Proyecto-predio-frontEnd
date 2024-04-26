@@ -26,61 +26,164 @@
       <div>PISO</div>
       <div>DPT</div>
       <input
-        class="squared"
+        class="squared form-control"
         type="text"
         placeholder="go"
         pattern="[0-9]*"
         maxlength="2"
       />
-      <input class="squared" type="text" placeholder="go" maxlength="2" />
-      <input class="squared" type="text" placeholder="go" maxlength="2" />
-      <input class="squared" type="text" placeholder="go" maxlength="2" />
-      <input class="squared" type="text" placeholder="go" maxlength="2" />
-      <input class="squared" type="text" placeholder="go" maxlength="2" />
-      <input class="squared" type="text" placeholder="go" maxlength="2" />
-      <input class="squared" type="text" placeholder="goa" maxlength="3" />
+      <input
+        class="squared form-control"
+        type="text"
+        placeholder="go"
+        maxlength="2"
+      />
+      <input
+        class="squared form-control"
+        type="text"
+        placeholder="go"
+        maxlength="2"
+      />
+      <input
+        class="squared form-control"
+        type="text"
+        placeholder="go"
+        maxlength="2"
+      />
+      <input
+        class="squared form-control"
+        type="text"
+        placeholder="go"
+        maxlength="2"
+      />
+      <input
+        class="squared form-control"
+        type="text"
+        placeholder="go"
+        maxlength="2"
+      />
+      <input
+        class="squared form-control"
+        type="text"
+        placeholder="go"
+        maxlength="2"
+      />
+      <input
+        class="squared form-control"
+        type="text"
+        placeholder="goa"
+        maxlength="3"
+      />
     </div>
 
     <div class="codigos">
       <div class="codigo-predial">
-        <input type="text" placeholder="codigo predial" />
+        <input class="form-control" type="text" placeholder="codigo predial" />
       </div>
       <div class="codigo-contribuyente">
-        <input type="text" placeholder="codigo contribuyente" />
+        <input
+          class="form-control"
+          type="text"
+          placeholder="codigo contribuyente"
+        />
       </div>
     </div>
     <div class="raiar">
       <div>Dato Raiar</div>
       <DIV>dc</DIV>
-      <input type="text" />
+      <input class="form-control" type="text" />
     </div>
     <div class="plano">
-      <input type="text" placeholder="FOTO" /><input
-        type="text"
-        placeholder="PLANO"
-      />
+      <input class="form-control" type="text" placeholder="FOTO" />
+      <input class="form-control" type="text" placeholder="PLANO" />
     </div>
 
     <div class="zonf">
-      <input type="text" placeholder="ESTRUC" /><input
-        type="text"
-        placeholder="ZONIF"
-      />
+      <input class="form-control" type="text" placeholder="ESTRUC" />
+      <input type="text" class="form-control" placeholder="ZONIF" />
     </div>
 
     <div class="manz">
-      <input type="text" placeholder="MANZ" /><input
-        type="text"
-        placeholder="LOTE"
-      />
+      <input class="form-control" type="text" placeholder="MANZ" />
+      <input class="form-control" type="text" placeholder="LOTE" />
 
-      <input type="text" placeholder="SUB-LOTE" />
+      <input class="form-control" type="text" placeholder="SUB-LOTE" />
     </div>
+
+    <!--
+  propiedad
+-->
+    <div class="cod-postal">codigo postal</div>
+    <div class="distrito">distrito</div>
+    <div class="lugar">urbanizacion,lugar,etc</div>
+
+    <div class="cod-postal"><input class="form-control" type="text" /></div>
+    <div class="distrito"><input class="form-control" type="text" /></div>
+    <div class="lugar"><input class="form-control" type="text" /></div>
+
+    <div class="avenida">
+      <p>Avenida,Jiron,Calle o pasaje</p>
+    </div>
+    <div class="num"><p>Num.</p></div>
+    <div class="dpt"><p>Dpt.</p></div>
+    <div class="mz"><p>Mz.</p></div>
+    <div class="lt"><p>Lt.</p></div>
+    <div class="telefono"><p>Telefono</p></div>
+
+    <div class="avenida">
+      <input type="text" class="form-control" />
+    </div>
+    <div class="num"><input type="text" class="form-control" /></div>
+    <div class="dpt"><input type="text" class="form-control" /></div>
+    <div class="mz"><input type="text" class="form-control" /></div>
+    <div class="lt"><input type="text" class="form-control" /></div>
+    <div class="telefono"><input type="text" class="form-control" /></div>
+
+    <div class="seleccion-propiedad">
+      <div class="frac-3">
+        <h4>Tipo de propiedad</h4>
+        <input
+          type="text"
+          id="miInput"
+          name="miInput"
+          list="opciones"
+          class="form-control"
+          placeholder=""
+        />
+
+        <datalist id="opciones">
+          <option value="Opción test 1"></option>
+          <option value="Opción test 2"></option>
+          <option value="Opción test 3"></option>
+          <option value="Opción test 4"></option>
+        </datalist>
+      </div>
+      <div class="frac-1">
+        <h4>Condicion de la propiedad</h4>
+        <input
+          type="text"
+          id="miInput"
+          name="miInput"
+          list="opciones"
+          placeholder=""
+          class="form-control"
+        />
+        <datalist id="opciones">
+          <option value="Opción test 1"></option>
+          <option value="Opción test 2"></option>
+          <option value="Opción test 3"></option>
+          <option value="Opción test 4"></option>
+        </datalist>
+      </div>
+    </div>
+
+    <div class="cod_via"><p>cod. via</p></div>
+    <div class="via"><p>Via (Avenida, Calle, Pasaje, etc.)</p></div>
+    <div class="n_municipal"><p>N° Municipal o Mz./Lt</p></div>
+    <div class="t"><p>T</p></div>
+    <div class="dpto">Dpto</div>
   </div>
   <!--codigo catastral-->
-  <div class="conteiner-Ccatastral">
-    <div class="part-1"></div>
-  </div>
 
   <!--
     DATOS DElote

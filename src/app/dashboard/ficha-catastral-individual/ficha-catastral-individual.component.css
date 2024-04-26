@@ -23,7 +23,7 @@ img {
 /* Definimos el tamaño de las cajas */
 .mosaic {
   display: grid;
-  grid-template-columns: repeat(10, 1fr); /* 4 columnas */
+  grid-template-columns: repeat(9, 1fr); /* 4 columnas */
   grid-template-rows: repeat(4, 1fr);
   grid-gap: 5px; /* Espacio entre cajas */
 }
@@ -31,7 +31,7 @@ img {
 /* Estilo de las cajas */
 .mosaic div {
   background-color: #ccc;
-  border: 1px solid #999;
+
   width: auto;
   text-align: center;
 }
@@ -74,7 +74,7 @@ img {
   justify-content: center;
 }
 .raiar {
-  grid-row: 2/4;
+  grid-row: 2/5;
   grid-column: 8;
   display: flex;
   flex-direction: column;
@@ -92,4 +92,37 @@ img {
 .manz {
   grid-row: 4;
   grid-column: 9;
+}
+
+.seleccion-propiedad {
+  grid-column: 1/10;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+.frac-3 {
+  grid-column: 2/6;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+}
+.frac-1 {
+  grid-column: 7/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+/*propiedad*/
+.cod-postal{
+  grid-column: 1;
+}
+.distrito{
+  grid-column: 2/5;
+}
+.lugar{
+  grid-column: 5/10;
+}
+.avenida{
+  grid-column: 1/5;
 }
