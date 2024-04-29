@@ -114,15 +114,34 @@ img {
   flex-direction: column;
 }
 /*propiedad*/
-.cod-postal{
+.cod-postal {
   grid-column: 1;
 }
-.distrito{
+.distrito {
   grid-column: 2/5;
 }
-.lugar{
+.lugar {
   grid-column: 5/10;
 }
-.avenida{
+.avenida {
   grid-column: 1/5;
+}
+
+.cod_via {
+  grid-column: 1;
+}
+.via {
+  grid-column: 2/6;
+}
+.n_municipal {
+  grid-column: 6;
+}
+.t {
+  grid-column: 7;
+}
+.dpto {
+  grid-column: 8;
+}
+.btn-agregar {
+  grid-column: 9;
 }
