@@ -1,2 +1,2 @@
-let baseUrl = 'http://10.4.9.1:8180'
+let baseUrl = 'http://10.4.1.6:8180'
 export default baseUrl;

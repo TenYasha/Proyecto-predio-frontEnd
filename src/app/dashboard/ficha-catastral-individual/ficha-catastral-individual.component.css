@@ -20,6 +20,9 @@ img {
   border: 0;
   border-radius: 0%;
 }
+.ficha-1-titulo {
+  grid-column: 1/10;
+}
 /* Definimos el tamaño de las cajas */
 .mosaic {
   display: grid;
@@ -144,4 +147,27 @@ img {
 }
 .btn-agregar {
   grid-column: 9;
+}
+
+.tabla-datos {
+  grid-column: 1/7;
+}
+
+.urb {
+  grid-column: 7/10;
+}
+
+.btn-ficha {
+  grid-row: 11/13;
+}
+
+.cod-uso {
+  grid-column: 1/3;
+}
+.descripcion-uso {
+  grid-column: 3/6;
+}
+.registro-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
